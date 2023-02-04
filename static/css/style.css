@@ -4,6 +4,8 @@
 }
 
 .main-header {
+    position: sticky;
+    top: 0;
     color: aliceblue;
     background-color: grey;
     display: flex;
@@ -14,6 +16,11 @@
 .logo {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
     margin: 30px;
+    transition: .3s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
 }
 
 .logo img {
@@ -36,4 +43,20 @@
 .navi__block_item a {
     background-color: black;
     padding: 1rem;
+    transition: 0.3s;
+}
+
+.navi__block_item a:hover {
+    background-color: rgb(66, 66, 66);
+    text-decoration: underline;
+}
+
+.main-main {
+    background-color: rgb(193, 193, 193);
+    height: 100vh;
+}
+
+.main-footer {
+    background-color: gray;
+    height: 100px;
 }
