@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;500&display=swap');
+* {
+    font-family: 'Unbounded', cursive;
+}
+
+.main-header {
+    color: aliceblue;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+    margin: 30px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navi {
+    text-align: center;
+    margin: 30px;
+}
+
+.navi__block {
+    display: flex;
+}
+
+.navi__block_item {
+    margin: 1rem;
+}
+
+.navi__block_item a {
+    background-color: black;
+    padding: 1rem;
+}
