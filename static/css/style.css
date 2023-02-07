@@ -1,8 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;500&display=swap');
 
+/* ----animation---- */
+
+@keyframes animdrop {
+    
+    0% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes animup {
+    
+    0% {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}
+
+/*  */
+
 * {
     font-family: 'Unbounded', cursive;
+    font-weight: 200;
 }
+
+/*  */
 
 body {
     position: relative;
@@ -12,6 +45,14 @@ body {
     min-height: 100%;
 }
 
+.container {
+    max-width: 1280px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* ---- header ---- */
+
 .site-header {
     background-color: grey;
     color: aliceblue;
@@ -19,11 +60,6 @@ body {
     box-shadow: 0 1px 4px rgba(0,0,0,.2);
 }
 
-.container {
-    max-width: 1280px;
-    padding: 1rem;
-    margin: 0 auto;
-}
 
 .grid {
     display: grid;
@@ -57,9 +93,7 @@ body {
 }
 
 .logo-link__item img {
-    width: 100%;
-    min-width: 35px;
-    max-width: 50px;
+    width: 50px;
 }
 
 .navi {
@@ -75,17 +109,37 @@ body {
     gap: 2rem;
 }
 
-.navi__block_item{
+.navi__block_item {
     white-space: nowrap;
     transition: .2s;
+}
+
+.navi__block_item a {
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
 }
 
 .navi__block_item:hover {
     color: black;
 }
 
-.site-main {
-    height: 100%;
+.menu-icon {
+    display: none;
+}
+
+/* ---- main ---- */
+
+
+
+/* ---- colors and media + hide ---- */
+
+.bg-gray {
+    background-color: gray;
+}
+
+.hide {
+    display: none;
 }
 
 @media (max-width: 1280px) {
@@ -109,7 +163,98 @@ body {
         max-width: none;
     }
 
+    .logo-link__item img {
+        width: 35px;
+    }
+
     h1.logo-link__item {
         display: none;
+    }
+
+    .menu-icon,
+    .cross {
+        display: block;
+        position: relative;
+        justify-self: end;
+        width: 30px;
+        height: 25px;
+        grid-row: 1;
+        grid-column: auto;
+        filter: drop-shadow(0 0.5rem 0.5rem black);
+        transition: .2s;
+    }
+
+    .menu-icon:hover,
+    .cross:hover {
+        filter: drop-shadow(0 0.15rem 0.15rem black);
+    }
+
+    .menu-icon span {
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: 11px;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        right: 0;
+    }
+
+    .menu-icon::after {
+        top: 0;
+    }
+
+    .menu-icon::before {
+        bottom: 0;
+    }
+
+    .cross::before,
+    .cross::after {
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        right: 0;
+    }
+
+    .cross::after {
+        transform: rotate(45deg);
+        bottom: 50%;
+    }
+
+    .cross::before {
+        transform: rotate(135deg);
+        bottom: 50%;
+    }
+
+    .navi {
+        justify-content: center;
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        animation: animdrop .2s forwards;
+    }
+
+    .naviup {
+        animation: animup .2s forwards;
+    }
+
+    .navi__block {
+        display: block;
+        align-items: center;
+    }
+
+    .navi__block_item {
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
     }
 }
