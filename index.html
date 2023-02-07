@@ -1,46 +1,71 @@
 <!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebLearn</title>
+    <link rel="shortcut icon" href="static/favicon/volvo_logo_icon_145762.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/css/clear.css">
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
-    <header class="main-header">
 
-        <div class="logo">
-            <a href="#" class="logo-link" id="logo-link" >
-                <img src="static/img/volvo.svg" alt="logo">
-            </a>
+<body class="general-page">
+
+    <!-- header for general page -->
+
+    <header class="site-header">
+
+        <div class="container grid">
+            
+            <div class="logo-box">
+                <a href="#" class="logo-link">
+                    <div class="logo-link__item">
+                        <img src="static/img/volvo.svg" alt="logo">
+                    </div>
+                    <h1 class="logo-link__item">VOLVO</h1>
+                </a>
+            </div>
+    
+            <nav class="navi">
+                <ul class="navi__block">
+                    <li class="navi__block_item">
+                        <a href="#" class="home">
+                            Домик
+                        </a>
+                    </li>
+                    <li class="navi__block_item">
+                        <a href="#" class="about">
+                            Обо мне
+                        </a>
+                    </li>
+                    <li class="navi__block_item">
+                        <a href="#" class="account">
+                            Аккаунт
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
-        <nav class="navi">
-            <ul class="navi__block">
-                <li class="navi__block_item">
-                    <a href="#" class="home">
-                        Домик
-                    </a>
-                </li>
-                <li class="navi__block_item">
-                    <a href="#" class="about">
-                        Обо мне
-                    </a>
-                </li>
-                <li class="navi__block_item">
-                    <a href="#" class="account">
-                        Аккаунт
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
     </header>
-    <main class="main-main">
+    <main class="site-main">
+        <div class="container">
+            <section class="welcome">
+                <header class="welcome__title">
+                    <h1>Welcome!</h1>
+                </header>
+                <div class="Welcome__paragraph">
+                    <p>
+                        some text
+                    </p>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer class="main-footer">
+    <footer class="site-footer">
     </footer>
     <script src="static/js/main.js"></script>
 </body>
