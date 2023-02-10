@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="navi__block_item">
-                        <a href="#" class="account">
+                        <a href="#" class="account" id="account">
                             Аккаунт
                         </a>
                     </li>
@@ -56,9 +56,36 @@
         </div>
 
     </header>
+
+    <form action="#" method="post" id="reg-form" class="form bg-gray hide">
+        <div class="form-box">
+
+            <div class="form-box__line">
+                <h1>Регистрация</h1>
+            </div>
+
+            <div class="form-box__inputs">
+                <label for="reg-form__email">E-mail:</label>
+                <input type="email" name="reg-form__email" id="reg-form__email">
+                
+                <label for="reg-form__password">Password:</label>
+                <input type="password" name="reg-form__password" id="reg-form__password">
+            </div>
+
+            <div class="form-box__line">
+                <button type="reset" id="reg-form__reset">reset</button>
+                <button type="submit" id="reg-form__submit">push</button>
+            </div>
+            
+        </div>
+    </form>
+
+    <div id="form-background" class="hide">
+    </div>
+
     <main class="site-main">
 
-        <div class="container bg-gray">
+        <div class="container">
             <section class="welcome">
                 <header class="welcome__title">
                     <h1>Welcome!</h1>
@@ -77,6 +104,15 @@
             <p>dfdsfsdfsdfsd</p>
         </div>
     </footer>
+
+
+    <!-- scripts connecting -->
+
+    <script src="static/js/valid.js"></script>
+    <script src="static/js/serialize.js"></script>
+    <script src="static/js/formHandler.js" async></script>
     <script src="static/js/main.js" async></script>
+
+
 </body>
 </html>

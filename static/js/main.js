@@ -1,10 +1,12 @@
 const btn = document.getElementById("naviBtn");
 const navi = document.getElementById("navi");
 
+windowListener();
+
 function windowListener() {
     var width = window.innerWidth;
     if (width < 767) {
-      navi.classList.add("hide");
+        navi.classList.add("hide");
     } else {
         navi.classList.remove("hide");
     }
@@ -33,4 +35,4 @@ document.getElementById("naviBtn").addEventListener("click", function() {
     }
 });
 
-alert("<3");
+// alert("<3");
