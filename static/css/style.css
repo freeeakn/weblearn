@@ -397,3 +397,9 @@ button {
         font-size: 2rem;
     }
 }
+#reg-form__reset:hover{
+    background-color: rgb(177, 71, 97);
+}
+#reg-form__submit:hover {
+    background-color: rgb(62, 222, 115);
+}
