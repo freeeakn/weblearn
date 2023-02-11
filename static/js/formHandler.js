@@ -18,10 +18,10 @@ function ExitForm() {
     );
 }
 
-accBtn.onclick = () => {
-    form.classList.remove('hide');
-    bgForm.classList.remove('hide');
-}
+// accBtn.onclick = () => {
+//     form.classList.remove('hide');
+//     bgForm.classList.remove('hide');
+// }
 
 btnSendForm.onclick = (event) => {
     event.preventDefault();
