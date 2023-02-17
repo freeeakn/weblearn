@@ -263,6 +263,24 @@ button {
 
 .site-main {
     position: relative;
+    height: 100vh;
+}
+
+.player {
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: black;
+    transition: .2s;
+}
+
+.coin {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: rgb(255, 230, 0);
 }
 
 /* ---- python ---- */
