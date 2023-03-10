@@ -53,7 +53,7 @@ async function onSubmit(event) {
   onSubmitStart();
   await fetch(
     `https://api.nomoreparties.co/github-search?q=${event.target.elements['title'].value}`
-  ).then(r => r.json())
+  ).then(response => response.json())
   .then(data => {
       const { items, total_count } = data;
       if (total_count) {
