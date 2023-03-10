@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import MainText from './components/MainText.vue'
 </script>
 
 <template>
@@ -8,4 +9,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="Hello, world!" />
     </div>
   </header>
+  <main>
+    <div class="wrapper">
+      <MainText msg="Ok"/>
+    </div>
+  </main>
 </template>
